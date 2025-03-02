@@ -1,5 +1,5 @@
-#import sys
-#sys.stdin = open("1.in")
+import sys
+sys.stdin = open("1.in")
 
 def solve(N, sky, A, B):
     res = 0
@@ -17,7 +17,7 @@ def solve(N, sky, A, B):
             if sky[i][j] == "B":
                 if pi < 0 or pj < 0:
                     return -1
-                if sky[i][j] == "W":
+                if sky[pi][pj] == "W":
                     return -1
 
     for i in range(N - 1, -1, -1):
@@ -26,7 +26,7 @@ def solve(N, sky, A, B):
             pj = j - A
             if sky[i][j] == "G":
                 res += 1
-                if pi < 0 or pi < 0:
+                if pi < 0 or pj < 0:
                     continue
                 elif sky[pi][pj] == "G":
                     sky[pi][pj] = "W"
