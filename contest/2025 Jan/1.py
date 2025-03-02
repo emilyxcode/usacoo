@@ -39,7 +39,7 @@ def solve(N, sky, A, B):
                 elif sky[pi][pj] == "W":
                     return -1
                 elif sky[pi][pj] == "G":
-                    sky[pi][pj] == "W"
+                    sky[pi][pj] = "W"
                 elif sky[pi][pj] == "B":
                     sky[pi][pj] = "G"
     return res
